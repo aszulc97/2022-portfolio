@@ -12,6 +12,7 @@ body {
 h1,
 h2 {
   font-family: $headerFont;
+  font-weight: 400;
 }
 
 p {
@@ -29,13 +30,10 @@ h5 {
 h1 {
   margin: 0;
   font-size: 4.209rem;
-  font-weight: 900;
-  color: var(--sand);
 }
 
 h2 {
   font-size: 3.157rem;
-  font-weight: 900;
 }
 
 h3 {
@@ -64,6 +62,77 @@ a {
   }
 }
 
-#cards {
+nav {
   display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  font-family: $mainFont;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  li a {
+    font-size: 1.333rem;
+  }
+}
+
+header {
+  padding: 25rem 20rem;
+
+  h4 {
+    padding: 1rem 0;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  padding: 2rem 0;
+}
+
+.logo {
+  font-size: 1.777rem;
+}
+
+section {
+  padding: 2rem 20rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+.project_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  max-width: 14rem;
+
+  img {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  h4 {
+    text-align: center;
+    word-wrap: normal;
+  }
+}
+
+footer {
+  padding: 1rem 15rem;
+  display: flex;
+  justify-content: space-between;
 }
