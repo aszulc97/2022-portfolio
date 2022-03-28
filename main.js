@@ -9,6 +9,7 @@ fetch(url)
 function showProjects(project) {
   const template = document.querySelector("template").content;
   const clone = template.cloneNode(true);
+  clone.querySelector("a").href = "project.html?id=" + project.id;
   clone.querySelector("h4").textContent = project.projtitle;
   clone.querySelector("img").src = project._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
   document.querySelector(".cards").appendChild(clone);
