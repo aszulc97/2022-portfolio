@@ -1,3 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&display=swap");
+$fontcolor: #383838;
+$background: #f4f4f4;
+$headerFont: "Abril Fatface", cursive;
+$mainFont: "Lato", sans-serif;
+
 body {
-  background-color: hotpink;
+  background-color: $background;
+  color: $fontcolor;
+}
+
+h1,
+h2 {
+  font-family: $headerFont;
+}
+
+p {
+  font-family: $mainFont;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4.209rem;
+  font-weight: 900;
+  color: var(--sand);
+}
+
+h2 {
+  font-size: 3.157rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 2.369rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.777rem;
+  margin: 0;
+}
+
+h5,
+p,
+li,
+a {
+  font-size: 1.333rem;
+}
+
+a {
+  text-decoration: none;
+  color: $fontcolor;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+i {
+  width: 3rem;
 }
