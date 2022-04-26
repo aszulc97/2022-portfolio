@@ -1,6 +1,6 @@
 import "./sass/style.scss";
 
-const url = "http://agata.dk/portfolio-db/wp-json/wp/v2/project?_embed";
+const url = "https://agata.dk/portfolio-db/wp-json/wp/v2/project?_embed";
 
 fetch(url)
   .then((res) => res.json())
@@ -14,3 +14,13 @@ function showProjects(project) {
   clone.querySelector("img").src = project._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
   document.querySelector(".cards").appendChild(clone);
 }
+
+//animations
+let fromLeft = [{ transform: "translateY(12px)" }, { transform: "translateY(0)" }, { transform: "translateY(12px)" }];
+
+let arrow = document.querySelector(".fa-arrow-down");
+arrow.animate(fromLeft, {
+  duration: 1000,
+  iterations: Infinity,
+  easing: "ease-out",
+});
