@@ -4,6 +4,22 @@ $background: #f4f4f4;
 $headerFont: "Abril Fatface", cursive;
 $mainFont: "Lato", sans-serif;
 
+html {
+  font-size: 16px;
+  // @media screen and (max-width: 700px) {
+  //   font-size: 14px;
+  // }
+  @media screen and (max-width: 610px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 520px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 10px;
+  }
+}
+
 body {
   background-color: $background;
   color: $fontcolor;
@@ -67,6 +83,12 @@ nav {
   align-items: center;
   padding: 1rem 5rem;
   font-family: $mainFont;
+  @media screen and (max-width: 520px) {
+    padding: 1rem 3rem;
+  }
+  @media screen and (max-width: 350px) {
+    padding: 1rem 1rem;
+  }
 
   ul {
     list-style: none;
@@ -81,7 +103,8 @@ nav {
 }
 
 header {
-  padding: 15rem 25rem;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
 
   h4 {
     padding: 1rem 2rem;
@@ -91,7 +114,7 @@ header {
 .icons {
   display: flex;
   justify-content: space-between;
-  width: 10%;
+  width: 8rem;
   padding: 2rem;
 
   i {
@@ -115,7 +138,37 @@ header {
 }
 
 section {
-  padding: 2rem 25rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+section,
+header {
+  padding-right: 25rem;
+  padding-left: 25rem;
+  @media screen and (max-width: 1700px) {
+    padding-right: 20rem;
+    padding-left: 20rem;
+  }
+  @media screen and (max-width: 1560px) {
+    padding-right: 15rem;
+    padding-left: 15rem;
+  }
+  @media screen and (max-width: 1390px) {
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+  @media screen and (max-width: 1240px) {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+  @media screen and (max-width: 770px) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  // @media screen and (max-width: 520px) {
+  //   padding-right: 1rem;
+  //   padding-left: 1rem;
+  // }
 }
 
 #about {
@@ -123,10 +176,14 @@ section {
     display: flex;
     justify-content: space-between;
     padding: 2rem 0;
+    @media screen and (max-width: 1050px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   img {
-    width: 30%;
-    //height: 100%;
+    width: 20rem;
+    min-height: auto;
     //padding: 3rem 0 3rem 10rem;
   }
   p {
@@ -144,6 +201,9 @@ section {
   gap: 2rem;
   flex-wrap: wrap;
 
+  @media screen and (max-width: 1070px) {
+    justify-content: center;
+  }
   flex-grow: 1;
 }
 
@@ -157,6 +217,16 @@ section {
   min-width: 240px;
   min-height: 280px;
   padding: 1rem;
+
+  @media screen and (max-width: 610px) {
+    min-height: 250px;
+  }
+  @media screen and (max-width: 520px) {
+    min-height: 200px;
+  }
+  @media screen and (max-width: 450px) {
+    min-height: 150px;
+  }
 
   img {
     width: 10rem;
@@ -177,6 +247,16 @@ footer {
   padding: 1rem 15rem;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1050px) {
+    padding: 1rem 10rem;
+  }
+  @media screen and (max-width: 770px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (max-width: 350px) {
+    padding: 1rem 5rem;
+  }
 }
 
 .project {
